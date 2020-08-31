@@ -28,7 +28,7 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Text="Product" />
-                <TextBox x:ConnectionId='10' Grid.Column="1" Name="Product"></TextBox>
+                <TextBox x:ConnectionId='13' Grid.Column="1" Name="Product"></TextBox>
             </Grid>
 
             <Grid Padding="10,0,0,10">
@@ -41,7 +41,7 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Text="Description" />
-                <TextBox x:ConnectionId='9' Grid.Column="1" Name="Description"></TextBox>
+                <TextBox x:ConnectionId='12' Grid.Column="1" Name="Description"></TextBox>
             </Grid>
 
             <Grid Padding="10,0,0,10">
@@ -54,7 +54,7 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Text="Images" />
-                <ComboBox x:ConnectionId='6' Name="AvatarComboBox" 
+                <ComboBox x:ConnectionId='8' Name="AvatarComboBox" 
                       Height="50"
                       Width="100"
                       Grid.Row="2" 
@@ -63,7 +63,9 @@
                       >
                     <ComboBox.ItemTemplate>
                         <DataTemplate                          >
-                            <Image x:ConnectionId='8'                       Width="40" Height="40" />
+                            <StackPanel x:ConnectionId='10'>
+                                <Image x:ConnectionId='11'                       Width="40" Height="40" />
+                            </StackPanel>
                         </DataTemplate>
                     </ComboBox.ItemTemplate>
                 </ComboBox>
@@ -78,7 +80,7 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <Button x:ConnectionId='5' Grid.Column="1" Content="Order"                     ></Button>
+                <Button x:ConnectionId='7' Grid.Column="1" Content="Order"                     ></Button>
             </Grid>
 
            
@@ -92,7 +94,10 @@
 >
                 <GridView.ItemTemplate>
                     <DataTemplate                          >
-                        <Image x:ConnectionId='4' x:Name="MyImage" Height="122" Width="101"                      />
+                        <StackPanel x:ConnectionId='4'>
+                            <Image x:ConnectionId='5' x:Name="MyImage" Height="122" Width="101"                      />
+                            <TextBlock x:ConnectionId='6'                             Foreground="red" FontSize="30"/>
+                        </StackPanel>
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>

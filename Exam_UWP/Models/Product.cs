@@ -22,10 +22,10 @@ namespace Exam_UWP.Models
         public string description { get; set; }
         public string img { get; set; }
 
-        public Product(string name, string description , ProductCategory category)
+        public Product(string name, string description , ProductCategory category )
         {
-            name = name;
-            description = description;
+            this.name = name;
+            this.description = description;
             img = String.Format("/Assets/Images/{0}/{1}.jpg", category,name);
 
         }

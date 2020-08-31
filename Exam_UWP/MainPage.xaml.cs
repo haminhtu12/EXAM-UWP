@@ -41,12 +41,15 @@ namespace Exam_UWP
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           // string img = ((Product)AvatarComboBox.SelectedValue).img;
-            string name = Product.Text;
-            string description = Description.Text;
-            var newProduct = new Product("relex", description, ProductCategory.dongho);
-            this.Products.Add(newProduct);
-            ProductManager.GetAllproduct(Products);
+            if(((Product)AvatarComboBox.SelectedValue).name != "")
+            {
+                string name = ((Product)AvatarComboBox.SelectedValue).name;
+                string description = Description.Text;
+                var newProduct = new Product(name, description, ProductCategory.dongho);
+                this.Products.Add(newProduct);
+                ProductManager.GetAllproduct(Products);
+
+            }
         }
     }
 }

@@ -63,7 +63,9 @@
                       >
                     <ComboBox.ItemTemplate>
                         <DataTemplate x:DataType="data:Product">
-                            <Image Source="{x:Bind img}" Width="40" Height="40" />
+                            <StackPanel>
+                                <Image Source="{x:Bind img}" Width="40" Height="40" />
+                            </StackPanel>
                         </DataTemplate>
                     </ComboBox.ItemTemplate>
                 </ComboBox>
@@ -92,7 +94,10 @@
 >
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="data:Product">
-                        <Image x:Name="MyImage" Height="122" Width="101" Source="{x:Bind img}"/>
+                        <StackPanel>
+                            <Image x:Name="MyImage" Height="122" Width="101" Source="{x:Bind img}"/>
+                            <TextBlock Text="{x:Bind description}" Foreground="red" FontSize="30"/>
+                        </StackPanel>
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
